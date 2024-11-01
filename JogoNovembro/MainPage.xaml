@@ -5,9 +5,32 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Shell.NavBarIsVisible="False">
     <Grid>
-        <Image Aspect="Fill" Source="cidade.jpg" />
-        <Image Aspect="Fill" Source="floresta.jpg" />
-        <Image Aspect="Fill" Source="natureza.jpg" />
+        <HorizontalStackLayout x:Name="HSLayer1">
+            <Image Aspect="Fill"
+                   Source="cidade.jpg"/>
+            <Image Aspect="Fill"
+                   Source="cidade.jpg"/>
+            <Image Aspect="Fill"
+                   Source="cidade.jpg"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="HSLayer2">
+            <Image Aspect="Fill"
+                   Source="floresta.jpg"/>
+            <Image Aspect="Fill"
+                   Source="floresta.jpg"/>
+            <Image Aspect="Fill"
+                   Source="floresta.jpg"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="HSLayer3">
+            <Image Aspect="Fill"
+                   Source="natureza.jpg"/>
+            <Image Aspect="Fill"
+                   Source="natureza.jpg"/>
+            <Image Aspect="Fill"
+                   Source="natureza.jpg"/>
+        </HorizontalStackLayout>
 
 
     </Grid>
