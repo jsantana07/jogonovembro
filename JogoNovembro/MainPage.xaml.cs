@@ -27,7 +27,7 @@ public partial class MainPage : ContentPage
 	}
 	void CalculaVelocidade(double w)
 	{
-		velocidade1 = (int)(w * 0.001);
+		velocidade1 = (int)(w * 0.004);
 		velocidade2 = (int)(w * 0.004);
 		velocidade3 = (int)(w * 0.008);
 		velocidade = (int)(w * 0.01);
@@ -42,9 +42,9 @@ public partial class MainPage : ContentPage
 		foreach (var A in HSLayer3.Children)
 			(A as Image).WidthRequest = w;
 
-		HSLayer1.WidthRequest = w * 1.5;
-		HSLayer2.WidthRequest = w * 1.5;
-		HSLayer3.WidthRequest = w * 1.5;
+		HSLayer1.WidthRequest = w ;
+		HSLayer2.WidthRequest = w;
+		HSLayer3.WidthRequest = w ;
 	}
 
 	void GerenciaCenarios()
