@@ -1,5 +1,5 @@
 namespace JogoNovembro;
-
+using FFImageLoading.Maui;
 public class Animacao
 {
     protected List<String> Animacao1 = new List<String>();
@@ -9,10 +9,10 @@ public class Animacao
     protected int AnimacaoAtiva = 1;
     bool parado = true;
     int frameAtual = 1;
-    protected Image compImage;
-    public Animacao(Image a)
+    protected  CachedImageView compImage;
+    public Animacao( CachedImageView a)
     {
-        compImage = a;
+        compImage  = a;
     }
     public void Stop()
     {

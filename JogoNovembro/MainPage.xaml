@@ -2,14 +2,16 @@
 <ContentPage
        x:Class="JogoNovembro.MainPage"
        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:ff="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Maui"
        Shell.NavBarIsVisible="False">
 
-
-
-
        <Grid>
-            
+              <Grid.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="OnGridClicked"/>
+              </Grid.GestureRecognizers>
+
+
 
               <HorizontalStackLayout x:Name="HSLayer1">
                      <Image Aspect="Fill"
@@ -39,24 +41,32 @@
               <HorizontalStackLayout x:Name="HSLayer3">
                      <Image  HorizontalOptions="End"
                              VerticalOptions="End"
+                             Aspect="AspectFill"
+                             HeightRequest="80"
                              Source="chao.png"/>
 
                      <Image  HorizontalOptions="End"
                              VerticalOptions="End"
+                              HeightRequest="80"
+                              Aspect="AspectFill"
                              Source="chao.png"/>
 
                      <Image  HorizontalOptions="End"
                              VerticalOptions="End"
+                              HeightRequest="80"
+                              Aspect="AspectFill"
                              Source="chao.png"/>
               </HorizontalStackLayout>
 
-                <Image x:Name="imgPlayer"
-                     HorizontalOptions="Center"
-                     VerticalOptions="End"
-                     HeightRequest="200"
-                     WidthRequest="200"
-                     Margin="0,0,0,50"
-                     Source="anda01.png"/>
+              <ff:CachedImageView 
+                                  CacheType="All"
+                                  CacheDuration="365"
+                                  x:Name="imgPlayer"
+                                  Margin="10,0,0,80"
+                                  HeightRequest="250"
+                                  WidthRequest="200"
+                                  HorizontalOptions="Start"
+                                  VerticalOptions="End"/>
 
 
        </Grid>
